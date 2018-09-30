@@ -2,44 +2,54 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ie.fileshare.distributedSystems.Controller.FileShareController">
+<FlowPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ie.distribsys.controllers.FileController">
    <children>
-      <Text id="sharedDirectoryText" fill="#d03131" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Shared Directory" textAlignment="CENTER" translateX="55.0" translateY="165.0">
-         <font>
-            <Font size="13.0" />
-         </font>
-      </Text>
-      <HBox prefHeight="69.0" prefWidth="609.0">
+      <VBox prefHeight="300.0" prefWidth="200.0" translateX="20.0" translateY="85.0">
          <children>
-            <Text id="headerText" fill="#6d98d0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Sharing" textAlignment="CENTER" translateX="230.0" translateY="30.0">
+            <ListView id="sharedFolderListView" prefHeight="299.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+      <HBox prefHeight="69.0" prefWidth="609.0" translateY="-300.0">
+         <children>
+            <Text id="headerText" fill="#6d98d0" strokeType="OUTSIDE" strokeWidth="0.0" text="File Sharing" textAlignment="CENTER" translateX="250.0" translateY="30.0">
                <font>
                   <Font size="24.0" />
                </font>
             </Text>
          </children>
       </HBox>
-      <HBox alignment="BOTTOM_CENTER" prefHeight="227.0" prefWidth="599.0" translateY="100.0">
+      <VBox prefHeight="30.0" prefWidth="142.0" translateX="230.0" translateY="-285.0">
          <children>
-            <ListView id="sharedDirectoryListView" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" translateX="-50.0">
-               <HBox.margin>
-                  <Insets bottom="35.0" />
-               </HBox.margin>
-            </ListView>
-            <Button id="moveFileBtn" mnemonicParsing="false" text="Move File" translateY="-85.0"  onAction="#buttonPress"/>
-            <ListView id="fileListView" prefHeight="200.0" prefWidth="200.0" translateX="50.0">
-               <HBox.margin>
-                  <Insets bottom="35.0" />
-               </HBox.margin>
-            </ListView>
+            <Text id="nowPlaying" strokeType="OUTSIDE" strokeWidth="0.0" text="Now Playing:" translateX="35.0" translateY="30.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Label id="currentSongText" text="Filename.mp3" translateX="40.0" translateY="45.0" />
+            <Button id="playBtn" mnemonicParsing="false" prefWidth="60.0" text="Play" translateX="45.0" translateY="90.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Separator layoutY="260.0" prefHeight="0.0" prefWidth="142.0" />
+            <Label id="selectFolderText" text="Select Folders" textFill="#3d6ce1" translateX="30.0" translateY="150.0" />
+            <Button id="sharedFolderBtn" minWidth="50.0" mnemonicParsing="false" prefWidth="60.0" text="Shared" textAlignment="CENTER" translateY="180.0" />
+            <Button id="localFolderBtn" minWidth="60.0" mnemonicParsing="false" prefWidth="60.0" text="Local" translateX="80.0" translateY="155.0" />
          </children>
-      </HBox>
-      <Text fill="#d03131" strokeType="OUTSIDE" strokeWidth="0.0" text="Select File to Move" translateX="440.0" translateY="-150.0" />
+      </VBox>
+      <VBox prefHeight="300.0" prefWidth="200.0" translateX="240.0" translateY="-285.0">
+         <children>
+            <ListView id="localFolderListView" prefHeight="307.0" prefWidth="200.0" />
+         </children>
+      </VBox>
    </children>
 </FlowPane>

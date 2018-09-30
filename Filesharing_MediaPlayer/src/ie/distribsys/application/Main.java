@@ -1,4 +1,4 @@
-package application;
+package ie.distribsys.application;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,15 +12,17 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("./Main.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("/Main.fxml"));
 		    
-	        Scene scene = new Scene(root, 300, 275);
+	        Scene scene = new Scene(root, 600, 500);
 	    
-	        primaryStage.setTitle("FXML Welcome");
+	        primaryStage.setTitle("Distributed Systems - File Share");
 	        primaryStage.setScene(scene);
 	        primaryStage.show();
+	        
+	        primaryStage.setResizable(false);
 		} catch(Exception e) {
-			System.out.println("Unable to render GUI Elements");
+			System.out.println("Unable to render GUI Elements" + "\n" + e);
 		}
 	}
 	
