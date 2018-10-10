@@ -15,7 +15,7 @@
    <children>
       <VBox prefHeight="300.0" prefWidth="200.0" translateX="20.0" translateY="85.0">
          <children>
-            <ListView id="sharedFolderListView" prefHeight="299.0" prefWidth="200.0" />
+            <ListView fx:id="sharedFolderListView" prefHeight="299.0" prefWidth="200.0" />
          </children>
       </VBox>
       <HBox prefHeight="69.0" prefWidth="609.0" translateY="-300.0">
@@ -42,8 +42,8 @@
             </Button>
             <Separator layoutY="260.0" prefHeight="0.0" prefWidth="142.0" />
             <Label id="selectFolderText" text="Select Folders" textFill="#3d6ce1" translateX="30.0" translateY="150.0" />
-            <Button id="sharedFolderBtn" minWidth="50.0" mnemonicParsing="false" prefWidth="60.0" text="Shared" textAlignment="CENTER" translateY="180.0" />
-            <Button id="localFolderBtn" minWidth="60.0" mnemonicParsing="false" prefWidth="60.0" text="Local" translateX="80.0" translateY="155.0" />
+            <Button id="sharedFolderBtn" minWidth="50.0" mnemonicParsing="false" onAction="#setSharedFolder" prefWidth="60.0" text="Shared" textAlignment="CENTER" translateY="180.0" />
+            <Button id="localFolderBtn" minWidth="60.0" mnemonicParsing="false" onAction="#setLocalFolder" prefWidth="60.0" text="Local" translateX="80.0" translateY="155.0" />
          </children>
       </VBox>
       <VBox prefHeight="300.0" prefWidth="200.0" translateX="240.0" translateY="-285.0">
